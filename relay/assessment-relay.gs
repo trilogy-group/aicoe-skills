@@ -21,7 +21,7 @@
  */
 
 const FOLDER_ID    = '1AfXB0oAa2EJTVCCyhbfges3LZruqbTSS';   // AI Spend Assessment folder
-const SUBMIT_TOKEN = 'YOUR_SUBMIT_TOKEN_HERE';             // low-privilege submit token (change if you like)
+const SUBMIT_TOKEN = 'SET_IN_DEPLOYED_SCRIPT';             // PLACEHOLDER — set the real token only in the deployed Apps Script, never commit it
 
 function doPost(e) {
   try {
