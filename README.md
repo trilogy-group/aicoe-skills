@@ -46,15 +46,19 @@ add it to that project's `.claude/settings.json`:
 
 ## Install (Codex CLI)
 
-```bash
-# Add the marketplace
-codex plugin marketplace add trilogy-group/aicoe-skills
+From the terminal:
 
-# Install a specific skill
+```bash
+codex plugin marketplace add trilogy-group/aicoe-skills
 codex plugin install ai-usage-assessment@aicoe-skills
 ```
 
-Or via the UI: type `/plugins` → **Marketplace** → enter `trilogy-group/aicoe-skills`.
+From inside a Codex session:
+
+```
+/plugins marketplace add trilogy-group/aicoe-skills
+/plugins install ai-usage-assessment@aicoe-skills
+```
 
 ## Install (opencode / OpenClaw / other SKILL.md runtimes)
 
