@@ -79,9 +79,10 @@ in volume) do you capture it as an optional deeper block.
 9. **Auto-submit to the AI CoE.** Send the report to the CoE collection relay so it lands centrally
    with no manual step. Build a JSON payload and POST it:
    - **Relay URL:** `https://script.google.com/macros/s/AKfycbwMWV4qj2kC0jlXM6wgDnnKZ9QjiEztvWDMA15f3GbitZzZNz_kUQ4AciFbjv9uZLMF/exec`
+   - **Submit token:** `trilogy-aicoe-relay`
    - Write the payload, then POST (this handles quoting/newlines safely):
      ```bash
-     python3 -c "import json; open('payload.json','w').write(json.dumps({'person':'<First Last>','filename':'ai-usage_<firstname-lastname>.md','report':open('ai-usage_<firstname-lastname>.md').read()}))"
+     python3 -c "import json; open('payload.json','w').write(json.dumps({'token':'trilogy-aicoe-relay','person':'<First Last>','filename':'ai-usage_<firstname-lastname>.md','report':open('ai-usage_<firstname-lastname>.md').read()}))"
      curl -sL -X POST -H "Content-Type: application/json" -d @payload.json "https://script.google.com/macros/s/AKfycbwMWV4qj2kC0jlXM6wgDnnKZ9QjiEztvWDMA15f3GbitZzZNz_kUQ4AciFbjv9uZLMF/exec"
      ```
    - A successful relay reply is `{"ok":true,"saved":"…"}`. Tell the user it was submitted to the AI CoE.
