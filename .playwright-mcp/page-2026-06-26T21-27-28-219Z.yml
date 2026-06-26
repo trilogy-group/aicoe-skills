@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: AI CoE
+      - navigation [ref=e5]:
+        - link "Tools" [ref=e6] [cursor=pointer]:
+          - /url: "#"
+        - link "Models" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+        - link "Tips & Tricks" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+        - link "Skills" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+        - link "Team" [ref=e10] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e13]:
+        - button "Sign in with Google. Opens in new tab" [ref=e15] [cursor=pointer]:
+          - generic [ref=e17]:
+            - img [ref=e19]
+            - generic [ref=e26]: Sign in with Google
+        - iframe
+  - main [ref=e27]:
+    - heading "Tools" [level=2] [ref=e29]

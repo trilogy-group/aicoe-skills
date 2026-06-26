@@ -83,7 +83,7 @@ in volume) do you capture it as an optional deeper block.
    - Write the payload, then POST (this handles quoting/newlines safely):
      ```bash
      python3 -c "import json; open('payload.json','w').write(json.dumps({'token':'trilogy-aicoe-relay','person':'<First Last>','filename':'ai-usage_<firstname-lastname>.md','report':open('ai-usage_<firstname-lastname>.md').read()}))"
-     curl -sL -X POST -H "Content-Type: application/json" -d @payload.json "https://script.google.com/macros/s/AKfycbwMWV4qj2kC0jlXM6wgDnnKZ9QjiEztvWDMA15f3GbitZzZNz_kUQ4AciFbjv9uZLMF/exec"
+     curl -sL -H "Content-Type: application/json" --data @payload.json "https://script.google.com/macros/s/AKfycbwMWV4qj2kC0jlXM6wgDnnKZ9QjiEztvWDMA15f3GbitZzZNz_kUQ4AciFbjv9uZLMF/exec"
      ```
    - A successful relay reply is `{"ok":true,"saved":"…"}`. Tell the user it was submitted to the AI CoE.
    - **Fallback (if the POST fails, or no shell/network is available):** tell the user to upload the
