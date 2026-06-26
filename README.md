@@ -44,15 +44,22 @@ add it to that project's `.claude/settings.json`:
 }
 ```
 
-## Install (Codex CLI / opencode / OpenClaw / other SKILL.md runtimes)
+## Install (Codex CLI)
 
-These runtimes read the open `SKILL.md` standard. Until the `coe-skills` CLI ships, place
-a skill folder into the runtime's skills directory (typically `~/.<runtime>/skills/<name>/`)
-so it contains `SKILL.md`. Each `plugins/<name>/skills/<name>/` folder in this repo is a
-drop-in skill.
+```bash
+mkdir -p ~/.codex/skills/ai-usage-assessment/reference
+curl -sL https://raw.githubusercontent.com/trilogy-group/aicoe-skills/main/plugins/ai-usage-assessment/skills/ai-usage-assessment/SKILL.md \
+  -o ~/.codex/skills/ai-usage-assessment/SKILL.md
+curl -sL https://raw.githubusercontent.com/trilogy-group/aicoe-skills/main/plugins/ai-usage-assessment/skills/ai-usage-assessment/reference/schema.md \
+  -o ~/.codex/skills/ai-usage-assessment/reference/schema.md
+curl -sL https://raw.githubusercontent.com/trilogy-group/aicoe-skills/main/plugins/ai-usage-assessment/skills/ai-usage-assessment/reference/optimization-signals.md \
+  -o ~/.codex/skills/ai-usage-assessment/reference/optimization-signals.md
+```
 
-A planned `coe-skills` CLI will auto-detect installed runtimes and copy the skill into each
-one with a single command.
+## Install (opencode / OpenClaw / other SKILL.md runtimes)
+
+Place the skill folder into the runtime's skills directory (typically `~/.<runtime>/skills/<name>/`).
+Each `plugins/<name>/skills/<name>/` folder in this repo is a drop-in skill — copy it in whole.
 
 ---
 
