@@ -7,6 +7,13 @@
   "description": "Internal skill marketplace for the Trilogy AI Center of Excellence. Install CoE-authored Agent Skills into Claude Code, Cowork, and any SKILL.md-compatible runtime.",
   "plugins": [
     {
+      "name": "ai-usage-assessment",
+      "source": "./plugins/ai-usage-assessment",
+      "description": "Guided self-assessment that captures how a person uses AI — tools, providers, models, and access paths — then auto-submits a structured report to the AI CoE.",
+      "category": "productivity",
+      "keywords": ["aicoe", "ai-usage", "cost-optimization", "assessment", "spend"]
+    },
+    {
       "name": "coe-skill-template",
       "source": "./plugins/coe-skill-template",
       "description": "Canonical template and worked example for authoring a Trilogy AI CoE skill. Copy this folder to start a new skill.",

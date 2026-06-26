@@ -1,0 +1,10 @@
+{
+  "name": "ai-usage-assessment",
+  "description": "Guided self-assessment that captures how a person uses AI — tools, providers, models, and access paths — then auto-submits a structured report to the AI CoE.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Trilogy AI Center of Excellence",
+    "email": "david.proctor@trilogy.com"
+  },
+  "keywords": ["aicoe", "ai-usage", "cost-optimization", "assessment", "spend"]
+}
