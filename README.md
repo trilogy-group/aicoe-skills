@@ -14,8 +14,8 @@ CLI (planned) are generated from the same skill folders.
 Add the marketplace once, then install any skill from it:
 
 ```bash
-# Add the marketplace (replace with the real org/repo once pushed)
-/plugin marketplace add <org>/aicoe-skills
+# Add the marketplace
+/plugin marketplace add trilogy-group/aicoe-skills
 
 # Install a specific skill
 /plugin install coe-skill-template@aicoe-skills
@@ -35,7 +35,7 @@ add it to that project's `.claude/settings.json`:
 {
   "extraKnownMarketplaces": {
     "aicoe-skills": {
-      "source": { "source": "github", "repo": "<org>/aicoe-skills" }
+      "source": { "source": "github", "repo": "trilogy-group/aicoe-skills" }
     }
   },
   "enabledPlugins": {
